@@ -3,7 +3,7 @@ const input = document.querySelector("input");
 const greeting = document.querySelector(".js-greetings");
 
 const USER_LS = "currentUser";
-const SHOWING_CN = "showing";
+const SHOWING_CN = "hello_name";
 
 function saveName(text) {
   localStorage.setItem(USER_LS, text);
@@ -21,10 +21,16 @@ function askForName() {
   form.addEventListener("submit", handleSubmit);
 }
 
+function WhatIsYourFocus(text) {
+  const What = document.querySelector(".whatIsYourFocus");
+  What.innerText = `What is your main focus today?`;
+}
+
 function paintGreeting(text) {
   form.classList.remove(SHOWING_CN);
   greeting.classList.add(SHOWING_CN);
-  greeting.innerText = `Hello ${text}`;
+  greeting.innerText = `Hello ${text}, please do your best`;
+  WhatIsYourFocus();
 }
 
 function loadName() {
