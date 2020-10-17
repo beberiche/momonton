@@ -4,7 +4,7 @@ const IMG_NUMBER = 15;
 
 function paintImage(imgNumber) {
   const image = new Image();
-  image.src = `https://beberiche.github.io/nomadcoder/images/${
+  image.src = `https://beberiche.github.io/momonton/images/${
     imgNumber + 1
   }.jpg`;
   image.classList.add("bgImage");
